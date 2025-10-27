@@ -27,51 +27,51 @@ git clone https://github.com/<your-username>/weather-app.git
 cd weather-app
 npm install
 ```
-3. Environment Setup
-Create a .env.local file in the project root:
-VITE_WEATHER_API_KEY=your_weather_api_key_here
-You can also include a public .env.example:
-VITE_WEATHER_API_KEY=your_weather_api_key_here
+### 3. Environment Setup
+- Create a .env.local file in the project root:
+- VITE_WEATHER_API_KEY=your_weather_api_key_here
+- You can also include a public .env.example:
+- VITE_WEATHER_API_KEY=your_weather_api_key_here
 
-4. Run the App
-npm run dev
-Open your browser at http://localhost:5173
+### 4. Run the App
+- npm run dev
+- Open your browser at http://localhost:5173
 
-5. Build for Production
-npm run build
+### 5. Build for Production
+- npm run build
 
-🗺️ Geolocation Notes
-Works only on HTTPS or localhost
-If location permission is denied, the app shows a helpful error message
-Inside iframes, ensure you use allow="geolocation"
+## 🗺️ Geolocation Notes
+- Works only on HTTPS or localhost
+- If location permission is denied, the app shows a helpful error message
+- Inside iframes, ensure you use allow="geolocation"
 
-🧩 Main Components
-App.jsx — Core logic for fetching and displaying weather
-LoadingSkelton.jsx — Animated loading placeholders
-App.css — Basic layout and Tailwind configuration
+## 🧩 Main Components
+- App.jsx — Core logic for fetching and displaying weather
+- LoadingSkelton.jsx — Animated loading placeholders
+- App.css — Basic layout and Tailwind configuration
 
-🧪 Example API Requests
-By City:
+## 🧪 Example API Requests
+- By City:
 fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=London&days=3`);
-By Coordinates:
+- By Coordinates:
 navigator.geolocation.getCurrentPosition(async (position) => {
   const { latitude, longitude } = position.coords;
   const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}&days=3`);
 });
 
-🐞 Common Issues
-“Geolocation is not supported” → Your browser or connection is not secure (use HTTPS)
-“Permission denied” → Enable location permission manually
-API errors (400/401) → Verify your WeatherAPI key and query format
-CORS issues → Use HTTPS and a valid WeatherAPI domain
+## 🐞 Common Issues
+- “Geolocation is not supported” → Your browser or connection is not secure (use HTTPS)
+- “Permission denied” → Enable location permission manually
+- API errors (400/401) → Verify your WeatherAPI key and query format
+- CORS issues → Use HTTPS and a valid WeatherAPI domain
 
-🚀 Deployment (Vercel / Netlify)
-Push your code to GitHub
-Connect your repo to Vercel or Netlify
-Add environment variable VITE_WEATHER_API_KEY
-Deploy the project
+## 🚀 Deployment (Vercel / Netlify)
+- Push your code to GitHub
+- Connect your repo to Vercel or Netlify
+- Add environment variable VITE_WEATHER_API_KEY
+- Deploy the project
 
-📁 Project Structure
+## 📁 Project Structure
 .
 ├── src/
 │   ├── components/
