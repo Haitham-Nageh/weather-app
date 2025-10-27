@@ -72,17 +72,17 @@ navigator.geolocation.getCurrentPosition(async (position) => {
 - Deploy the project
 
 ## 📁 Project Structure
-.
-├── src/
-│   ├── components/
-│   │   └── LoadingSkelton.jsx
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── App.css
-├── .env.example
-├── .gitignore
-├── index.html
-├── package.json
-├── README.md
-└── tailwind.config.js
+- .
+- ├── src/
+- │   ├── components/
+- │   │   └── LoadingSkelton.jsx
+- │   ├── App.jsx
+- │   ├── main.jsx
+- │   └── App.css
+- ├── .env.example
+- ├── .gitignore
+- ├── index.html
+- ├── package.json
+- ├── README.md
+- └── tailwind.config.js
 
